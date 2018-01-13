@@ -1,5 +1,6 @@
 package com.diegoramirez.proyectonuevo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -47,7 +48,14 @@ public class BotonesButterKnife extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_ingresa:
-                tvText.setText("Ingresasteeeeeeee");
+                ///tvText.setText("Ingresasteeeeeeee");
+
+
+                Intent intent = new Intent(this,Main2Activity.class);
+                intent.putExtra("nombre","diego");
+                startActivity(intent);
+
+
                 break;
             case R.id.btn_facebook:
                 tvText.setText("No dispone de conexion");
